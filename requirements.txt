@@ -1,5 +1,7 @@
-Streamlit 
-transformers 
-scikit-learn 
+streamlit
+scikit-learn
+transformers
 torch
 pandas
+huggingface_hub
+sentencepiece
