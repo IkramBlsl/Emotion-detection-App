@@ -1,6 +1,6 @@
 streamlit
 scikit-learn
-transformers
+transformers>=4.38.0
 torch
 pandas
 huggingface_hub
