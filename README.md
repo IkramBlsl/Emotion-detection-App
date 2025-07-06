@@ -88,7 +88,7 @@ These models helped us validate the superiority of transformers in emotion class
 
 | Model              | Accuracy  | Notes                            |
 |-------------------|----------|----------------------------------|
-| **DistilBERT**     | *0.94%*  | Best overall performance         |
+| **DistilBERT**     | *0.94*  | Best overall performance         |
 | XGBoost            | *0.74*  | Limited on contextual features   |
 | Logistic Regression | *0.87*  | Fast but less expressive         |
 | RNN (GRU)         | *0.35*  | Decent but underperformed BERT   |
