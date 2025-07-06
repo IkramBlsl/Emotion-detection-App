@@ -95,13 +95,18 @@ These models helped us validate the superiority of transformers in emotion class
 
 
 📊 Why Did GRU Fail Here?
+
 Problem	Explanation
+
 💬 Very short texts	The RNN doesn't have enough context to capture meaningful patterns
+
 🧪 Not enough data	RNNs need a large amount of examples to learn from sequential information
+
 🧱 No pre-trained embeddings	Your GRU learned everything from scratch, so it had no prior knowledge of word meanings
+
 📐 Overparameterization	Too many neurons → leads to poor learning or convergence to the dominant class
 
-✨ Demo
+## ✨ Demo
 
 Try the app directly on Hugging Face Spaces:
 🔗 [`Launch Emotion Detection App`](https://huggingface.co/spaces/Ikraaaam/Emotion_detection_app)
