@@ -97,4 +97,4 @@ These models helped us validate the superiority of transformers in emotion class
 ✨ Demo
 
 Try the app directly on Hugging Face Spaces:
-🔗 Launch Emotion Detection App
+🔗 [`Launch Emotion Detection App`](https://huggingface.co/spaces/Ikraaaam/Emotion_detection_app)
