@@ -2,6 +2,14 @@
 
 A web-based application for emotion classification using a fine-tuned DistilBERT model. The app allows users to input text and returns the predicted emotion with a confidence score and emoji.
 
+## 📊 Overview
+
+This application was built and deployed using:
+- **DistilBERT** fine-tuned for emotion classification
+- **Streamlit** for the interactive web interface
+- **Docker** container for deployment
+- **Hugging Face Spaces** for hosting
+
 ## 🚀 Features
 
 - Text-based emotion classification using a BERT model
@@ -56,6 +64,16 @@ Example .csv format:
 
 All preprocessing, fine-tuning, and evaluation were done using the `transformers` and `datasets` libraries.
 
+## 🚀 Deployment
+
+The application is deployed and publicly accessible on [Hugging Face Spaces](https://huggingface.co/spaces/Ikraaaam/Emotion_detection_app).
+
+Deployment was done using the **Docker SDK** available in Hugging Face Spaces. The Streamlit app runs inside a Docker container, and the trained BERT model is loaded from a local directory included in the container.
+
+If you wish to explore or run the project **locally**, you can find the full source code and setup instructions in the [GitHub repository](https://github.com/Ikraaaam/emotion-detection-app).
+
+
+
 The model and tokenizer are hosted on Hugging Face Hub:  
 🔗 [`Ikraaaam/model_emotion_bert`](https://huggingface.co/Ikraaaam/model_emotion_bert)
 
@@ -105,7 +123,52 @@ Problem	Explanation
 | 🧱 No pre-trained embeddings | The GRU learned everything from scratch, so it had no prior knowledge of word meanings |
 | 📐 Overparameterization      | Too many neurons → leads to poor learning or convergence to the dominant class          |
 
-## ✨ Demo
+## 🧪 Local Setup Instructions
 
-Try the app directly on Hugging Face Spaces:
-🔗 [`Launch Emotion Detection App`](https://huggingface.co/spaces/Ikraaaam/Emotion_detection_app)
+To run the app locally:
+
+1. Clone the GitHub repository:
+   ```bash
+   git clone https://github.com/Ikraaaam/emotion-detection-app
+   cd emotion-detection-app
+   ```
+
+2. Create and activate a virtual environment (optional but recommended):
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+   ```
+
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Download the label encoder file (already included in the repo under `src/label_encoder.pkl`).
+
+5. You **do not** need to download or retrain the BERT model. It is publicly available on Hugging Face at:
+   [`Ikraaaam/bert_emotion_app`](https://huggingface.co/Ikraaaam/bert-emotion-app)
+
+6. Run the app:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+
+## 📷 Screenshots
+
+Screenshots of the deployed app (on Hugging Face or local environment).
+### The App :
+![image](https://github.com/user-attachments/assets/930d9037-f4b6-4ab3-a3a6-4c78a413ccd7)
+
+### Prediction of the sentence "I'm upset" :
+![image](https://github.com/user-attachments/assets/7bb8c392-ea15-4d50-9077-1b600bf9c0ef)
+
+### The history of previous predictions :
+![image](https://github.com/user-attachments/assets/cc73db24-8098-44cc-bffd-f92bbcec2e9f)
+
+---
+
+## 📌 Note
+If you face memory issues in Hugging Face Spaces, consider reducing batch size, optimizing model size, or switching to Gradio + hosted model.
+
