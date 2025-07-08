@@ -154,6 +154,7 @@ To run the app locally:
    streamlit run streamlit_app.py
    ```
 
+---
 
 ## 📷 Screenshots
 
@@ -166,6 +167,10 @@ Screenshots of the deployed app (on Hugging Face or local environment).
 
 ### The history of previous predictions :
 ![image](https://github.com/user-attachments/assets/cc73db24-8098-44cc-bffd-f92bbcec2e9f)
+
+### Prediction of sentences in a txt file :
+![image](https://github.com/user-attachments/assets/2b028dea-f1b5-4b4d-9cff-637fcb1e382a)
+
 
 ---
 
